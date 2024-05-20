@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="COMP 318 Messaging System." />
+    <title>COMP 318 M3ssag1n8</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.6/iconify-icon.min.js"></script>
+    <script defer type="module" src="../src/main.ts"></script>
+    <script
+      defer
+      type="module"
+      src="../src/components/post-display.ts"
+    ></script>
+    <script defer type="module" src="../src/components/message-box.ts"></script>
+    <script
+      defer
+      type="module"
+      src="../src/components/workspace-btn.ts"
+    ></script>
+  </head>
+
+  <body>
+    <!--  Nav Bar -->
+    <header class="header">
+      <section class="header-left">
+        <section class="logo">
+          <iconify-icon icon="fluent-emoji:owl" label="owl-icon"></iconify-icon>
+        </section>
+        <h1>COMP 318 M3ssag1n8</h1>
+      </section>
+      <section class="header-right">
+        <button id="logout" style="float: right">Logout</button>
+        <workspace-btn> </workspace-btn>
+      </section>
+    </header>
+
+    <main class="main-container">
+      <nav class="sidebar">
+        <section id="displayedUser">
+          <b>User:</b> <span id="loginUserName"></span>
+        </section>
+        <section id="displayedWorkspace">
+          <b>Workspace:</b> <span id="currentWorkspace"></span>
+        </section>
+        <hr />
+        <section id="channels-toolbar">
+          <article id="channels-create">
+            <p>
+              Create a channel:
+              <input
+                type="text"
+                id="new-channel"
+                placeholder="New channel name..."
+              />
+              <button id="create-channel">✏️</button>
+            </p>
+          </article>
+
+          <article id="channels-delete">
+            <p>Delete this channel: <button id="delete-channel">❌</button></p>
+          </article>
+
+          <article id="channels-refresh">
+            <p>
+              Refresh channels:
+              <button id="refresh-channel" style="margin-right: 10px">
+                ♻️
+              </button>
+            </p>
+          </article>
+        </section>
+        <hr />
+        <fieldset id="channel-list">Select a workspace!</fieldset>
+      </nav>
+
+      <section class="content">
+        <section class="content-header">
+          <h2>Posts</h2>
+          <hr />
+        </section>
+        <section class="scroll-box">
+          <channel-display> </channel-display>
+        </section>
+        <message-box id="msg-box"> </message-box>
+      </section>
+      <!-- Modal Login Popup-->
+      <article class="modal" id="login-form">
+        <article class="modal-content" id="inner-login-content">
+          <h2>Login</h2>
+          <input type="text" id="username" placeholder="Username" />
+          <button id="submit-user">Submit</button>
+        </article>
+      </article>
+    </main>
+  </body>
+</html>

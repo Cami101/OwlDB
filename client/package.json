@@ -1,0 +1,37 @@
+{
+  "name": "m3ssag1n8",
+  "version": "1.0.0",
+  "description": "COMP 318 Messaging Web App",
+  "browserslist": "defaults",
+  "scripts": {
+    "prebuild": "rimraf dist && npm run schema",
+    "build": "parcel build html/*.html",
+    "check": "npm run schema && tsc",
+    "doc": "typedoc --entryPointStrategy expand src/ types/",
+    "format": "prettier --write html/ src/ styles/ schemas/ tests/",
+    "schema": "json2ts -i schemas/ -o types/ --cwd=schemas/",
+    "start": "npm run schema && parcel html/*.html",
+    "test": "npm run schema && jest"
+  },
+  "author": "COMP 318",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@parcel/transformer-inline-string": "^2.9.1",
+    "cypress": "^13.6.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.6.2",
+    "json-schema-to-typescript": "^13.0.1",
+    "parcel": "^2.9.1",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.0",
+    "typedoc": "^0.25.2",
+    "typescript": "^5.2.2",
+    "whatwg-fetch": "^3.6.17"
+  },
+  "dependencies": {
+    "@microsoft/fetch-event-source": "^2.0.1",
+    "ajv": "^8.12.0"
+  }
+}

@@ -1,0 +1,14 @@
+Hello!
+
+In order to run our tests, we're using a combination of `cypress` and `jest`.
+
+If you have already cloned the repo, make sure to `npm install`.
+
+First, run the server with `npm run start`, then in our folder, run `cypress run`
+
+Also, make sure the URL in the cypress file is correct (Default is http://localhost:1234),
+and that the workspaces created by cypress don't already exist.
+
+For the `jest` tests, you can just run `npm run test` as expected. 
+
+Thank you!
