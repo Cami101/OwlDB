@@ -1,4 +1,4 @@
-Messaging web client application for COMP 318, created by Hankang (Cameron) Liu, also credit: Nat Hill, Zoe Katz for mvc, Leo li, Stephan for OWL database.
+Messaging web client application for COMP 318, created by Hankang (Cameron) Liu, also credit: Nat Hill, Zoe Katz for mvc, Leo li, Stephan for Owl database.
 
 # M3ssag1n8
 
